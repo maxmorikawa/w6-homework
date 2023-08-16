@@ -8,6 +8,12 @@
     //クリックしたら実行される処理
     const clickHandler = (e) => {
         e.preventDefault();
-        console.log('Clicked');
+        
+        const $content =$trigger[0].nextElementSibling;
+        if($content.style.display === 'block') {
+            $content.style.display = 'none';
+        } else {
+            $content.style.display = 'block';
+        }
     }
 })();
